@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+import './App.css';
 
 class App extends Component {
   render() {
-    const name = 'Nick'
+    const var1 = {
+      key1: 'Some Data'
+    }
+
     return (
       <div className="App">
-        React
-        {name}
+        {var1.key1}
       </div>
     )
   }
