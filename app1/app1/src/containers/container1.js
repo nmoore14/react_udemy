@@ -11,15 +11,27 @@ class Contianer1 extends Component {
 
 	// correct
 	changeState = () => (
-		this.setState((prevState, props) => ({ 
-			stateprop2: prevState.stateProp2 + 1 })
-	))
+		this.setState(
+			{
+				stateProp2: this.state.stateProp2 + 1,
+				stateprop1: this.state.stateprop1 + "L" 
+			}
+		)
+	)
+
+	changeState2 = () => (
+		this.setState({stateprop1: this.state.stateprop1 + "L"})
+	)
 
 	render() {
 		return (
 			<div>
 				<button onClick={() => this.changeState()}>Change State</button>
-				{this.state.stateprop2}
+				<button onClick={() => this.changeState2()}>Change State 1</button>
+				<br />
+				{this.state.stateProp2}
+				<br />
+				{this.state.stateprop1}
 			</div>
 		)
 	}
