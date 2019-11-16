@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Component1 from '../functional/component1';
 
 class Contianer1 extends Component {
 	constructor(props) {
@@ -29,9 +30,7 @@ class Contianer1 extends Component {
 				<button onClick={() => this.changeState()}>Change State</button>
 				<button onClick={() => this.changeState2()}>Change State 1</button>
 				<br />
-				{this.state.stateProp2}
-				<br />
-				{this.state.stateprop1}
+				<Component1 prop1={this.state.stateprop1} />
 			</div>
 		)
 	}

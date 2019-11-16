@@ -6,11 +6,13 @@ import './App.css';
 
 class App extends Component {
   render() {
-    return (
+    return(
       <div className="App">
         React
-        <Container1 nickname="nuggz" />
-        <Component1 name="Nick" age="30"/>
+        {false
+          ? true ? <div>Condition 1</div> : <div>Condition 2</div>
+          : true ? <div>Condition 3</div> : <div>Condition 4</div>
+        }
       </div>
     )
   }
