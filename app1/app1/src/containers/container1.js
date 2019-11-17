@@ -1,39 +1,50 @@
 import React, { Component } from 'react';
 import Component1 from '../functional/component1';
 
-class Contianer1 extends Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			stateprop1: "Our Initial State",
-			stateProp2: 5
+class Container1 extends Component {
+
+	Arr1 = [
+		{
+			id: 1,
+			text: 'text 1',
+			number: 1
+		},
+		{
+			id: 2,
+			text: 'text 2',
+			number: 2
+		},
+		{
+			id: 3,
+			text: 'text 3',
+			number: 3
+		},
+		{
+			id: 4,
+			text: 'text 4',
+			number: 4
+		},
+		{
+			id: 5,
+			text: 'text 5',
+			number: 5
 		}
-	}
+	]
 
-	// correct
-	changeState = () => (
-		this.setState(
-			{
-				stateProp2: this.state.stateProp2 + 1,
-				stateprop1: this.state.stateprop1 + "L" 
-			}
-		)
-	)
-
-	changeState2 = () => (
-		this.setState({stateprop1: this.state.stateprop1 + "L"})
+	RenderListItem = (props) => (
+		<div>
+			{props.item.text}
+			<p>{props.item.number}</p>
+		</div>
 	)
 
 	render() {
 		return (
 			<div>
-				<button onClick={() => this.changeState()}>Change State</button>
-				<button onClick={() => this.changeState2()}>Change State 1</button>
-				<br />
-				<Component1 prop1={this.state.stateprop1} />
+				{this.Arr1.map((item) => ( <this.RenderListItem key={item.id} item={item} />))}
 			</div>
 		)
 	}
 }
 
-export default Contianer1;
+export default Container1;

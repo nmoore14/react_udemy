@@ -9,10 +9,7 @@ class App extends Component {
     return(
       <div className="App">
         React
-        {false
-          ? true ? <div>Condition 1</div> : <div>Condition 2</div>
-          : true ? <div>Condition 3</div> : <div>Condition 4</div>
-        }
+        <Container1 />
       </div>
     )
   }
