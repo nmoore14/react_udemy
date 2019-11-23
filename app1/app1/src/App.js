@@ -9,6 +9,7 @@ class App extends Component {
     return(
       <div className="App">
         React
+        <Container1 />
       </div>
     )
   }
